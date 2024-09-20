@@ -26,4 +26,10 @@
             }
         }
     }
+
+}
+
+.footerEnd {
+    background-color: rgb(88, 82, 82);
+    border: 1px solid red;
 }
