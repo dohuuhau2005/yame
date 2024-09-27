@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="listimg">
+        <img src="https://cmsv2.yame.vn/uploads/0b2d8617-5870-44cb-a864-565a41b16113/BST_No_Style.jpg?quality=80&w=0&h=0"
+            alt="Image 1">
+        <img src="https://cmsv2.yame.vn/uploads/91b6b81d-83e6-4d22-befb-47a6ee2b58a0/BST_Non_Branded.jpg?quality=80&w=0&h=0"
+            alt="Image 2">
+        <img src="https://cmsv2.yame.vn/uploads/91b6b81d-83e6-4d22-befb-47a6ee2b58a0/BST_Non_Branded.jpg?quality=80&w=0&h=0"
+            alt="Image 3">
+    </div>
+
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <style>
+        .listimg {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            /* Adjust to fit your layout */
+        }
+
+        .listimg img {
+            flex-shrink: 0;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <script>
+        const listImage = document.querySelector('.listimg');
+        const imgs = Array.from(document.querySelectorAll('.listimg img'));
+        let current = 0;
+        const totalImages = imgs.length;
+
+        function scrollImages(direction) {
+            const containerWidth = listImage.offsetWidth;
+
+            if (direction === 'next') {
+                if (current === totalImages - 1) {
+                    current = 0;
+                } else {
+                    current++;
+                }
+            } else if (direction === 'prev') {
+                if (current === 0) {
+                    current = totalImages - 1;
+                } else {
+                    current--;
+                }
+            }
+
+            listImage.style.transform = `translateX(${-containerWidth * current}px)`;
+        }
+
+        document.getElementById('next').addEventListener('click', () => scrollImages('next'));
+        document.getElementById('prev').addEventListener('click', () => scrollImages('prev'));
+    </script>
+</body>
+
+</html>
