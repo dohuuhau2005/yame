@@ -47,7 +47,9 @@
                             .bigct {
 
 
-                                .dropdown-item {}
+                                .dropdown-item {
+                                    transition: width 2s linear 1s !important;
+                                }
                             }
 
                             .smallct {
@@ -63,7 +65,11 @@
 
 .dropdown-item:hover {
     color: black !important;
+    background-color: rgb(222, 228, 226) !important;
+    transition: all 0.5s ease !important;
 }
+
+
 
 .nav-link:hover {
     color: brown !important;
