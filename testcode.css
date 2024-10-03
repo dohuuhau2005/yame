@@ -1,33 +1,46 @@
-.containersuper {
-    padding: 0;
+/* Ensure the dropdown menu is scrollable */
+.dropdown-menu {
+    max-height: 60vh;
+    /* Adjust as needed, vh is viewport height */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    position: absolute;
+    width: 100%;
+    /* Take full width */
+    left: 0;
+    top: 100%;
+    border-top: 1px solid red;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 767.98px) {
+    .dropdown-menu {
+        max-height: 80vh;
+        /* Increase max-height on small screens */
+    }
+}
+
+/* Style the links */
+.dropdown-menu .bigct a,
+.dropdown-menu .smallct a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu .bigct a:hover,
+.dropdown-menu .smallct a:hover {
+    color: black;
+}
+
+/* Remove margins and paddings to utilize space */
+.dropdown-menu .row,
+.dropdown-menu .col,
+.dropdown-menu .box {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 
-.dropdownmenu {
-    display: none;
-}
-
-.menudrop {
-    li {
-        list-style: none;
-
-        a {}
-    }
-
-    li:hover {
-        .dropdownmenu {
-            display: block;
-        }
-    }
-}
-
-.box {
-    a {
-        font-siz;
-    }
-
-    .boxmini {
-        font-size: 20px;
-    }
+.dropdown-menu .box {
+    padding: 10px;
 }

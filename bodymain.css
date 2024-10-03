@@ -7,27 +7,7 @@
     display: flex;
 }
 
-.smalldivmenu {
-    a {
-        font-size: 40px;
-        text-decoration: none;
-        display: flex;
-        padding: 5px 20px;
-    }
 
-    ul {
-        li {
-            list-style: none;
-
-
-            a {
-                text-decoration: none;
-                font-size: 20px;
-            }
-        }
-    }
-
-}
 
 .footerEnd {
     background-color: rgb(88, 82, 82);
@@ -36,7 +16,36 @@
 
 .containerdrop {
     position: absolute;
-    display: block;
-    left: 20px;
+
+    left: 0;
     top: 90px;
+    width: -webkit-fill-available;
+    height: 400px;
+    text-decoration: none;
+    border-top: 1px solid red;
+
+    .row {
+        .col {
+            .box {
+                .bigct {
+                    font-size: 16px;
+                    padding: 10px 30px;
+
+                    a {
+                        border: none;
+                    }
+                }
+
+                .smallct {
+                    padding: 0 0;
+                    text-align: left;
+                    width: 300px;
+
+                    a {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
 }

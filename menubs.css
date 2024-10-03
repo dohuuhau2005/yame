@@ -1,0 +1,70 @@
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
+
+.navbar {
+    /* position: fixed !important;
+    width: -webkit-fill-available; */
+}
+
+.navbar {
+    .navbar-brand {
+        position: relative !important;
+        right: -20px;
+        /* set up ko anh huong den navbar md screen */
+        padding: 20px 60px !important;
+
+        img {
+            width: 163px;
+            height: 58px;
+
+
+        }
+    }
+}
+
+.navct {
+    .navbar-nav {
+
+
+
+        .nav-item {
+            padding: 0 20px !important;
+
+
+            .dropdown-menu {
+
+
+                .row {
+                    width: -webkit-fill-available;
+                    border-top: 2px solid red;
+
+                    .col {
+                        .box {
+
+                            .bigct {
+
+
+                                .dropdown-item {}
+                            }
+
+                            .smallct {
+                                .dropdown-item {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-item:hover {
+    color: black !important;
+}
+
+.nav-link:hover {
+    color: brown !important;
+}
